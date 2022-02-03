@@ -170,9 +170,9 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 
-img {
+/* img {
   border-style: none;
-}
+} */
 
 /* Forms
    ========================================================================== */
@@ -407,15 +407,14 @@ img {
   padding: 5px;
   margin: 10px;
   cursor: pointer;
-  outline: none;
   transform: scale(1);
   transition: all 0.5s ease;
-  outline: 2px solid transparent;
+  box-shadow: 0 0 0 1pt transparent;
   border-radius: 50%;
 }
 
 img:hover {
-  outline: 2px solid whitesmoke;
+  box-shadow: 0 0 0 2pt whitesmoke;
   transform: scale(1.1);
   transition: all 0.5s ease;
   border-radius: 50%;
