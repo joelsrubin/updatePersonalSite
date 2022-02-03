@@ -421,7 +421,6 @@ img:hover {
 .header_container {
   height: 100%;
   width: 100%;
-  margin: 10px;
 }
 
 /* .img_container {
@@ -461,8 +460,9 @@ a {
   }
 
   p {
-    margin: 2px;
+    margin: 2px auto;
     padding: 5px;
+    width: 70%;
   }
 
   .name {
