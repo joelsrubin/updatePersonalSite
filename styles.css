@@ -397,6 +397,8 @@ header {
 
 footer {
   height: 10vh;
+  margin-top: 15px;
+  padding-top: 15px;
 }
 
 img {
