@@ -28,7 +28,6 @@ html {
  * Remove the margin in all browsers.
  */
 
-html,
 body {
   margin: 0;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -264,6 +263,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
 legend {
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
@@ -403,20 +408,21 @@ footer {
   padding-top: 15px;
 }
 
-img {
+a img,
+img:focus {
   padding: 5px;
   margin: 10px;
   cursor: pointer;
+  will-change: transform;
   transform: scale(1);
-  transition: all 0.5s ease;
-  box-shadow: 0 0 0 1pt transparent;
+  transition: all 450ms ease;
   border-radius: 50%;
 }
 
-img:hover {
+a img:hover {
   box-shadow: 0 0 0 2pt whitesmoke;
   transform: scale(1.1);
-  transition: all 0.5s ease;
+  transition: all 125ms ease;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.276);
 }
