@@ -4,6 +4,8 @@
 * {
   -webkit-font-smoothing: antialiased;
   font-family: 'Fira Code', monospace;
+  /* box-sizing: border-box; */
+  /* overflow-x: hidden; */
 }
 
 /* Document
@@ -478,4 +480,24 @@ a {
 
 .icon {
   color: transparent;
+}
+
+@media screen and (min-width: 600px) {
+  .dot {
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    left: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translateY(0);
+    transition: transform 10s ease;
+  }
+
+  .dot:hover {
+    transform: translateY(500px);
+    transition: transform 10s ease;
+  }
 }
