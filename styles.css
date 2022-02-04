@@ -453,10 +453,12 @@ a {
 .job {
   text-decoration: none;
   color: black;
+  transition: text-shadow 200ms ease;
 }
 
 .job:hover {
-  text-decoration: underline;
+  text-shadow: 1px 1px 2px pink;
+  transition: text-shadow 200ms ease;
 }
 
 .job:visited:active:focus {
@@ -476,10 +478,6 @@ a {
     margin: 2px auto;
     padding: 5px;
     width: 70%;
-  }
-
-  .name {
-    font-size: 2.5rem;
   }
 }
 
