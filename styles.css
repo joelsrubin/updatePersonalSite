@@ -481,6 +481,7 @@ a {
   }
   .job {
     text-shadow: none;
+    text-decoration: underline;
   }
   .job:hover {
     text-shadow: none;
