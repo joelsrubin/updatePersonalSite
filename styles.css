@@ -19,7 +19,6 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  height: 100%;
 }
 
 /* Sections
@@ -29,12 +28,15 @@ html {
  * Remove the margin in all browsers.
  */
 
-body {
-  margin: 0;
+html {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
   height: 100%;
+}
+
+body {
+  margin: 0;
 }
 
 @keyframes gradient {
