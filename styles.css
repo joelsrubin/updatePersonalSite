@@ -479,6 +479,22 @@ a {
     padding: 5px;
     width: 70%;
   }
+  .job {
+    text-shadow: none;
+  }
+  .job:hover {
+    text-shadow: none;
+  }
+  a img {
+    box-shadow: none;
+    transform: scale(1);
+    background-color: transparent;
+  }
+  a img:hover {
+    box-shadow: none;
+    transform: scale(1);
+    background-color: transparent;
+  }
 }
 
 .icon {
