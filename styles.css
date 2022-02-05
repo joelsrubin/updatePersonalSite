@@ -192,3 +192,15 @@ a {
     transition: transform 10s ease;
   }
 }
+
+span {
+  transform: translateY(0);
+  display: inline-block;
+  transition: transform 450ms ease;
+  cursor: default;
+}
+
+span:hover {
+  transform: translateY(-10px);
+  transition: transform 250ms ease;
+}
