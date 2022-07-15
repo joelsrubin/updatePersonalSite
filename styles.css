@@ -1,11 +1,11 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rock+3D&display=swap");
 
 * {
   -webkit-font-smoothing: antialiased;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   /* box-sizing: border-box; */
   /* overflow-x: hidden; */
 }
@@ -105,10 +105,14 @@ a img:hover {
   width: 100%;
 }
 
-/* .img_container {
-  width: 30%;
+.img_container {
+  width: 10%;
   flex-wrap: nowrap;
-} */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
 
 a {
   font-weight: bold;
@@ -143,7 +147,7 @@ a {
 }
 
 .name > span {
-  font-family: 'Rock 3D', cursive;
+  font-family: "Rock 3D", cursive;
 }
 
 @media screen and (max-width: 600px) {
