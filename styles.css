@@ -66,6 +66,8 @@ main {
   flex-direction: column;
   justify-content: space-around;
   height: 80vh;
+  width: 100%;
+  margin: auto;
 }
 
 header {
@@ -104,18 +106,22 @@ a img:hover {
   height: 100%;
   width: 100%;
 }
-
+section {
+  width: 80%;
+  margin: auto;
+}
 .img_container {
-  width: 10%;
-  flex-wrap: nowrap;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
 }
 
 a {
   font-weight: bold;
+  /* width: 60px; */
 }
 
 .img_wrapper {
@@ -148,6 +154,13 @@ a {
 
 .name > span {
   font-family: "Rock 3D", cursive;
+}
+
+@media screen and (min-width: 500px) {
+  section {
+    width: 60%;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -184,6 +197,10 @@ a {
 }
 
 @media screen and (min-width: 600px) {
+  section {
+    width: 50%;
+    margin: auto;
+  }
   .dot {
     position: absolute;
     top: 10px;
@@ -213,4 +230,31 @@ span {
 span:hover {
   transform: translateY(-10px);
   transition: transform 250ms ease;
+}
+
+@media screen and (min-width: 700px) {
+  section {
+    width: 40%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  section {
+    width: 30%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    width: 25%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  section {
+    width: 20%;
+    margin: auto;
+  }
 }
