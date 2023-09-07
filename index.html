@@ -20,6 +20,7 @@
           <span>J</span><span>o</span><span>e</span><span>l</span> <span>R</span
           ><span>u</span><span>b</span><span>i</span><span>n</span>
         </h2>
+
         <p>
           I am a Software Engineer at
           <a class="job" href="https://www.sureapp.com" target="_blank">
@@ -144,6 +145,26 @@
     </main>
     <footer>
       <p>&copy; Joel Rubin 2023</p>
+      <div class="row">
+        <span>page views:</span>
+        <span id="views">0</span>
+      </div>
     </footer>
   </body>
+  <script>
+    async function updateViewCount() {
+      await fetch('https://api.val.town/v1/run/Joelsrubin.updateViewCount');
+    }
+
+    async function run() {
+      await updateViewCount();
+      const views = await fetch(
+        'https://api.val.town/v1/run/Joelsrubin.pageViews'
+      );
+      const result = await views.json();
+      const div = document.getElementById('views');
+      div.innerText = result;
+    }
+    run();
+  </script>
 </html>
