@@ -156,15 +156,12 @@
       await fetch('https://api.val.town/v1/run/Joelsrubin.updateViewCount');
     }
 
-    async function run() {
+    (async () => {
       await updateViewCount();
       const views = await fetch(
         'https://api.val.town/v1/run/Joelsrubin.pageViews'
       );
-      const result = await views.json();
-      const div = document.getElementById('views');
-      div.innerText = result;
-    }
-    run();
+      document.getElementById('views').innerText = await views.json();
+    })();
   </script>
 </html>
