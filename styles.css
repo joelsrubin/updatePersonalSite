@@ -300,3 +300,14 @@ button[type='submit'] {
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 700px) {
+  /* … */
+  .guest-book {
+    width: 50vw;
+  }
+
+  .inputs {
+    width: 50vw;
+  }
+}
