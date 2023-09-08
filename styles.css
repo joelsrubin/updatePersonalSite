@@ -6,17 +6,9 @@
 * {
   -webkit-font-smoothing: antialiased;
   font-family: 'Fira Code', monospace;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   /* overflow-x: hidden; */
 }
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 
 html {
   line-height: 1.15; /* 1 */
@@ -55,26 +47,30 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  max-height: 100vh;
+  justify-content: space-evenly;
+  height: 100%;
   text-align: center;
-  gap: 20px;
+  gap: 10px;
+}
+.bio {
+  margin-top: 20px;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 80vh;
+  justify-content: space-between;
+  height: 100%;
   width: 100%;
   margin: auto;
 }
 
-header {
-  /* height: 10vh; */
+.header_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 footer {
@@ -106,50 +102,15 @@ a img:hover {
   background-color: rgba(255, 255, 255, 0.276);
 }
 
-.header_container {
-  height: 100%;
-  width: 100%;
-}
 section {
   width: 80%;
   margin: auto;
-}
-.img_container {
-  width: 90%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
-  display: flex;
-  justify-content: center;
 }
 
 a {
   font-weight: bold;
   /* width: 60px; */
-}
-
-.img_wrapper {
-  display: inline-block;
-
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -khtml-border-radius: 50%;
-}
-
-.job {
-  text-decoration: none;
-  color: black;
-  transition: text-shadow 200ms ease;
-}
-
-.job:hover {
-  text-shadow: 1px 1px 2px pink;
-  transition: text-shadow 200ms ease;
-}
-
-.job:visited:active:focus {
-  color: black;
+  font-size: 20px;
 }
 
 .name {
@@ -161,9 +122,6 @@ a {
   font-family: 'Rock 3D', cursive;
 }
 
-@media screen and (min-width: 500px) {
-}
-
 @media screen and (max-width: 600px) {
   h2 {
     font-size: 2rem;
@@ -173,13 +131,6 @@ a {
     margin: 2px auto;
     padding: 5px;
     width: 70%;
-  }
-  .job {
-    text-shadow: none;
-    text-decoration: underline;
-  }
-  .job:hover {
-    text-shadow: none;
   }
 
   a img {
@@ -195,26 +146,6 @@ a {
 
 .icon {
   color: transparent;
-}
-
-@media screen and (min-width: 600px) {
-  .dot {
-    position: absolute;
-    top: 10px;
-    cursor: pointer;
-    left: 10px;
-    height: 50px;
-    width: 50px;
-    background-color: #fff;
-    border-radius: 50%;
-    transform: translateY(0);
-    transition: transform 10s ease;
-  }
-
-  .dot:hover {
-    transform: translateY(500px);
-    transition: transform 10s ease;
-  }
 }
 
 span.letter {
@@ -259,9 +190,6 @@ span.letter:hover {
 .guest-book > :nth-child(odd) {
   z-index: 99;
   background-color: rgb(255, 251, 191);
-}
-
-.message-text {
 }
 
 button[type='submit'] {
@@ -310,4 +238,15 @@ button[type='submit'] {
   .inputs {
     width: 50vw;
   }
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.list-item {
+  font-size: 20px;
 }

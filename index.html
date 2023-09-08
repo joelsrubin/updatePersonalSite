@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
+    <main>
       <div class="header_container">
         <h2 class="name">
           <span class="letter">J</span><span class="letter">o</span
@@ -23,138 +23,38 @@
           ><span class="letter">b</span><span class="letter">i</span
           ><span class="letter">n</span>
         </h2>
-
-        <p>
-          I am a Software Engineer at
+        <span class="bio">
+          Currently at
           <a class="job" href="https://www.sureapp.com" target="_blank">
             SureApp</a
           >
-          <br /><br />
-          <span>📧 </span
-          ><a
+        </span>
+      </div>
+      <div id="main">
+        <span
+          >📧
+          <a
             href="mailto:joelsrubin@gmail.com?subject=Hey%20Joel!"
             target="_blank"
             >joelsrubin@gmail.com</a
-          >! <br /><br />
-          <span>✏️ </span><a href="guestbook.html">Sign my guestbook!</a>
-          <br /><br />
-
-          <span>👓 views:</span>
-          <span id="views">0</span>
-        </p>
+          >!
+        </span>
+        <span>✏️ <a href="guestbook.html">Sign my guestbook!</a></span>
+        <span
+          >👾
+          <a href="https://my-wordle-experience.netlify.app/" target="_blank"
+            >Play my wordle clone</a
+          ></span
+        >
+        <div>
+          <span class="list-item">👓 views:</span>
+          <span class="list-item" id="views">0</span>
+        </div>
       </div>
-    </header>
-    <main>
-      <section>
-        <h2>Work</h2>
-        <div class="img_container">
-          <div class="img_wrapper">
-            <a
-              href="https://www.smartmatic.com/us/"
-              target="_blank"
-              class="icon"
-            >
-              <img
-                src="./assets/smartmatic.png"
-                alt="Smartmatic"
-                height="60px"
-                width="60px"
-              />
-            </a>
-          </div>
-          <a href="https://www.sureapp.com" target="_blank" class="icon">
-            <img
-              src="./assets/sureapp.jpeg"
-              alt="SureApp"
-              height="60px"
-              width="60px"
-            />
-          </a>
-        </div>
-      </section>
-
-      <section>
-        <h2>Personal</h2>
-        <div class="img_container">
-          <a
-            href="https://my-wordle-experience.netlify.app/"
-            target="_blank"
-            class="icon"
-          >
-            <img
-              src="./assets/2051647.855dd88a copy.svg"
-              alt="Wordle"
-              height="60px"
-              width="60px"
-            />
-          </a>
-
-          <a
-            href="https://vite-vinyl.netlify.com/"
-            target="_blank"
-            class="icon"
-          >
-            <img
-              src="/assets/vinyl.svg"
-              alt="Vinyl"
-              height="60px"
-              width="60px"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/joel-rubin-0529/"
-            target="_blank"
-            class="icon"
-          >
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn"
-              height="60px"
-              width="60px"
-            />
-          </a>
-          <a href="https://github.com/joelsrubin?" target="_blank" class="icon">
-            <img
-              src="./assets/github.jpeg"
-              alt="Github"
-              height="60px"
-              width="60px"
-            />
-          </a>
-        </div>
-      </section>
-      <section>
-        <h2>Study</h2>
-        <div class="img_container">
-          <a href="https://www.nyu.edu/" target="_blank" class="icon">
-            <img src="./assets/nyu.png" alt="NYU" height="60px" width="60px" />
-          </a>
-          <a href="https://www.soas.ac.uk/" target="_blank" class="icon">
-            <img
-              src="./assets/soas.jpeg"
-              alt="SOAS"
-              height="60px"
-              width="60px"
-            />
-          </a>
-          <a
-            href="https://www.hackreactor.com/coding-bootcamp?utm_source=Google&utm_medium=cpc&utm_term=hack%20reactor&utm_campaign=HR_Brand_Keywords_NAT&gclid=CjwKCAiAl-6PBhBCEiwAc2GOVMHTWjknB03yuFa4tHDqg1pclWIeFEwlJO-SczZxawNHXRg-KFajWBoCUrUQAvD_BwE"
-            target="_blank"
-            class="icon"
-          >
-            <img
-              src="./assets/hackreactor.jpeg"
-              alt="HackReactor"
-              height="60px"
-              width="60px"
-            />
-          </a>
-        </div>
-      </section>
+      <footer>
+        <p>&copy;<span id="year">2023</span></p>
+      </footer>
     </main>
-    <footer>
-      <p>&copy; Joel Rubin <span id="year">2023</span></p>
-    </footer>
   </body>
   <script>
     const yearSpan = document.getElementById('year');
