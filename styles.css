@@ -244,6 +244,54 @@ span.letter:hover {
   gap: 8px;
 }
 
+.message {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.guest-book {
+  height: 50vh;
+  border-radius: 5px;
+  margin: auto 0;
+  background-color: palegoldenrod;
+  overflow: scroll;
+}
+
+.guest-book > :nth-child(even) {
+  z-index: 99;
+  background-color: rgb(255, 251, 191);
+}
+
+button[type='submit'] {
+  width: 80%;
+  padding: 5px;
+  height: 50px;
+  margin: auto;
+}
+.inputs {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-book {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px black solid;
+  background-color: transparent;
+}
+
 @media screen and (min-width: 700px) {
   section {
     width: 40%;
