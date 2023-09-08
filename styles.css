@@ -215,6 +215,16 @@ button[type='submit'] {
   align-items: center;
 }
 
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: auto;
+  gap: 14px;
+  width: 75%;
+}
+
 @media (min-width: 700px) {
   /* … */
   .guest-book {
@@ -224,15 +234,20 @@ button[type='submit'] {
   .inputs {
     width: 50vw;
   }
-}
-#main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
+
+  #main {
+    margin: auto;
+    gap: 14px;
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .list-item {
   font-size: 20px;
+}
+
+.link {
+  display: flex;
+  gap: 14px;
 }
