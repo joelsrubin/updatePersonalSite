@@ -37,10 +37,6 @@ html {
   height: 100%;
 }
 
-body {
-  margin: 0;
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -54,11 +50,15 @@ body {
 }
 
 body {
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-height: 100vh;
   text-align: center;
+  gap: 20px;
 }
 
 main {
@@ -80,7 +80,7 @@ header {
 footer {
   height: 10vh;
   padding-top: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
