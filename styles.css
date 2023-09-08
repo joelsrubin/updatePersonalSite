@@ -234,13 +234,6 @@ button[type='submit'] {
   .inputs {
     width: 50vw;
   }
-
-  #main {
-    margin: auto;
-    gap: 14px;
-    width: 100%;
-    align-items: center;
-  }
 }
 
 .list-item {
