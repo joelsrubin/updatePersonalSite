@@ -59,11 +59,13 @@
     async function handleSubmit(e) {
       const name = e.currentTarget.name.value;
       const message = e.currentTarget.message.value;
-
+      const args = JSON.stringify({
+        name,
+        message,
+      });
       await fetch(
-        `https://api.val.town/v1/run/Joelsrubin.signGuestBook?args=[{"name": "${name}", "message": "${message}"}]`
+        `https://api.val.town/v1/run/Joelsrubin.signGuestBook?args=[${args}]`
       );
-      e.target.reset();
     }
 
     async function refreshList() {
@@ -104,6 +106,7 @@
         left: 0,
         behavior: 'smooth',
       });
+      e.target.reset();
       submitButton.toggleAttribute('disabled');
     });
 
