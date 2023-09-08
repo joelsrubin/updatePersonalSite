@@ -27,7 +27,7 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="guest-container">
         <div class="guest-book"></div>
         <form class="inputs">
           <div class="input-container">
@@ -38,7 +38,7 @@
             <label>message</label>
             <input type="text" class="sign-book" name="message" required />
           </div>
-          <button type="submit">submit</button>
+          <button type="submit" id="submit">submit</button>
         </form>
       </section>
     </main>
@@ -49,11 +49,12 @@
   <script>
     const yearSpan = document.getElementById('year');
     const guestBook = document.querySelector('.guest-book');
+    const submitButton = document.getElementById('submit');
 
     function createEntry({ name, message }) {
       const messageSpan = document.createElement('span');
       messageSpan.classList.add('message');
-      messageSpan.innerHTML = `<b>${name}:</b> <span>${message}</span>`;
+      messageSpan.innerHTML = `<b>${name}:</b> <div id="message-text">${message}</div>`;
       return messageSpan;
     }
 
@@ -96,6 +97,7 @@
 
     const form = document.querySelector('.inputs');
     form.addEventListener('submit', async (e) => {
+      submitButton.toggleAttribute('disabled');
       e.preventDefault();
       await handleSubmit(e);
       await refreshList();
@@ -104,6 +106,7 @@
         left: 0,
         behavior: 'smooth',
       });
+      submitButton.toggleAttribute('disabled');
     });
 
     (async () => {

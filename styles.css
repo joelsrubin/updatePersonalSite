@@ -249,19 +249,28 @@ span.letter:hover {
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
+  overflow: scroll;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .guest-book {
   height: 50vh;
+  width: 55vw;
   border-radius: 5px;
-  margin: auto 0;
+  margin: auto;
+  padding: 20px 0px;
   background-color: palegoldenrod;
   overflow: scroll;
+  box-shadow: 0.25rem 0.25rem black, -0.25rem -0.25rem #9d9c9c;
 }
 
-.guest-book > :nth-child(even) {
+.guest-book > :nth-child(odd) {
   z-index: 99;
   background-color: rgb(255, 251, 191);
+}
+
+.message-text {
 }
 
 button[type='submit'] {
@@ -293,29 +302,9 @@ button[type='submit'] {
   background-color: transparent;
 }
 
-@media screen and (min-width: 700px) {
-  section {
-    width: 40%;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 900px) {
-  section {
-    width: 30%;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  section {
-    width: 25%;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  section {
-    width: 20%;
-    margin: auto;
-  }
+.guest-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
