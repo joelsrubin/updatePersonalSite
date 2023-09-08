@@ -243,4 +243,8 @@ button[type='submit'] {
 .link {
   display: flex;
   gap: 14px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5rem;
 }
