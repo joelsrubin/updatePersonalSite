@@ -147,7 +147,7 @@
       </section>
     </main>
     <footer>
-      <p>&copy; Joel Rubin 2023</p>
+      <p>&copy; Joel Rubin <span id="year">2023</span></p>
       <div class="row">
         <span>page views:</span>
         <span id="views">0</span>
@@ -155,9 +155,22 @@
     </footer>
   </body>
   <script>
+    const yearSpan = document.getElementById('year');
+    const viewsDiv = document.getElementById('views');
+
     async function updateViewCount() {
       await fetch('https://api.val.town/v1/run/Joelsrubin.updateViewCount');
     }
+
+    /** @returns {number} */
+    async function getViewCount() {
+      const data = await fetch(
+        'https://api.val.town/v1/run/Joelsrubin.pageViews'
+      );
+      const result = await data.json();
+      return result;
+    }
+
     function animateValue(obj, start, end, duration, easingFunction) {
       let startTimestamp = null;
       const step = (timestamp) => {
@@ -178,15 +191,16 @@
       return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
     }
 
-    (async () => {
-      await updateViewCount();
-      const views = await fetch(
-        'https://api.val.town/v1/run/Joelsrubin.pageViews'
-      );
-      const updated = await views.json();
-      const div = document.getElementById('views');
+    function setYear() {
+      const currentYear = new Date().getFullYear();
+      yearSpan.innerHTML = currentYear;
+    }
 
-      animateValue(div, 0, updated, 4000, easeInOutQuad);
+    (async () => {
+      setYear();
+      await updateViewCount();
+      const updated = await getViewCount();
+      animateValue(viewsDiv, 0, updated, 4000, easeInOutQuad);
     })();
   </script>
 </html>
