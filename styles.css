@@ -162,10 +162,6 @@ a {
 }
 
 @media screen and (min-width: 500px) {
-  section {
-    width: 60%;
-    margin: auto;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -202,10 +198,6 @@ a {
 }
 
 @media screen and (min-width: 600px) {
-  section {
-    width: 50%;
-    margin: auto;
-  }
   .dot {
     position: absolute;
     top: 10px;
@@ -256,9 +248,8 @@ span.letter:hover {
 
 .guest-book {
   height: 50vh;
-  width: 55vw;
+  width: 75vw;
   border-radius: 5px;
-  margin: auto;
   padding: 20px 0px;
   background-color: palegoldenrod;
   overflow: scroll;
@@ -285,6 +276,7 @@ button[type='submit'] {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 .input-container {
   display: flex;
