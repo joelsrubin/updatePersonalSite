@@ -28,8 +28,6 @@ html {
 }
 
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -61,8 +59,7 @@ main {
 
 footer {
   height: 10vh;
-  padding-top: 5px;
-  padding-bottom: 50px;
+  padding: 1em 1em calc(1em + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   justify-content: center;
