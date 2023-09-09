@@ -35,6 +35,8 @@ body {
   height: 100%;
   text-align: center;
   gap: 10px;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 .bio {
   margin-top: 20px;
