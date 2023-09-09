@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#D7F4D7" />
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <title>Joel Rubin</title>
+    <link rel="apple-touch-icon" href="../assets/baseball.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header_container">
+        <h2 class="name">
+          <span>Guest Book</span>
+        </h2>
+
+        <p><span>⬅</span> <a href="../index.html">Back</a></p>
+      </div>
+    </header>
+    <main>
+      <section class="guest-container">
+        <div class="guest-book"></div>
+        <form class="inputs">
+          <div class="input-container">
+            <label>name</label>
+            <input type="text" class="sign-book" name="name" required />
+          </div>
+          <div class="input-container">
+            <label>message</label>
+            <input type="text" class="sign-book" name="message" required />
+          </div>
+          <button type="submit" id="submit">submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy;<span id="year">2023</span></p>
+    </footer>
+  </body>
+  <script type="module" src="../scripts/guestbook.js"></script>
+</html>
