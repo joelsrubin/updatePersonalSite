@@ -235,6 +235,10 @@ button[type='submit'] {
   .inputs {
     width: 50vw;
   }
+
+  #main {
+    width: 50%;
+  }
 }
 
 .list-item {

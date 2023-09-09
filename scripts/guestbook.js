@@ -25,9 +25,8 @@ async function refreshList(vals) {
   } else {
     messages = await getMessages();
   }
-  const divs = [];
-  messages.forEach((message) => {
-    divs.push(createEntry(message));
+  const divs = messages.map((message) => {
+    return createEntry(message);
   });
 
   while (guestBook.firstChild) {
