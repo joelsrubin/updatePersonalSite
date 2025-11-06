@@ -24,7 +24,21 @@ html {
 
 html {
   height: 100%;
-  background-color: rgb(215, 244, 215);
+  background: linear-gradient(-45deg, #d7f4d7, #e3f4f4, #f4e3f4, #f4f4d7);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
@@ -40,6 +54,7 @@ body {
 }
 .bio {
   margin-top: 20px;
+
 }
 
 main {
@@ -96,6 +111,19 @@ a {
   font-weight: bold;
   /* width: 60px; */
   font-size: 20px;
+}
+
+.job {
+  transition: text-shadow 1s ease;
+  text-decoration: none;
+}
+
+.job:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+               0 0 20px rgba(255, 255, 255, 1),
+               0 0 30px rgba(100, 200, 255, 0.8),
+               0 0 40px rgba(100, 200, 255, 0.8),
+               0 0 50px rgba(100, 200, 255, 0.6)
 }
 
 .name {
